@@ -20,7 +20,9 @@ au FileType clojure,ocaml,lua,ruby,scheme set ts=2 sw=2 et
 " for http://bitbucket.org/ids/zero
 au FileType c set ts=4 sw=4 tw=78
 
-" In general, we want 72 columns for 'prose'. We also want spell check.
-au FileType markdown set tw=72 spell
+" We want word wrapping for 'prose'. We also want spell check.
+au FileType markdown,text set wrap linebreak nolist tw=0 spell
 
 let mapleader = "-"
+
+set mouse=a
