@@ -15,10 +15,12 @@ set ts=8 sw=8 noet
 au FileType haskell set ts=4 sw=4 et
 
 " tabstop 2 spaces
-au FileType clojure,ocaml,lua,ruby,scheme set ts=2 sw=2 et
+au FileType hy,lua,clojure,ocaml,ruby,scheme,cabal set ts=2 sw=2 et
 
-" for http://bitbucket.org/ids/zero
-au FileType c set ts=4 sw=4 tw=78
+" My C conventions
+au FileType c,cpp set ts=4 sw=4 tw=80
+
+au FileType html set ts=2 sw=2
 
 " We want word wrapping for 'prose'. We also want spell check.
 au FileType markdown,text set wrap linebreak nolist tw=0 spell
@@ -26,3 +28,4 @@ au FileType markdown,text set wrap linebreak nolist tw=0 spell
 let mapleader = "-"
 
 set mouse=a
+
