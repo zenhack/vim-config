@@ -25,7 +25,14 @@ au FileType html set ts=2 sw=2
 " We want word wrapping for 'prose'. We also want spell check.
 au FileType markdown,text set wrap linebreak nolist tw=0 spell
 
+" Folds are useful, but I don't want to see them by default.
+set nofen
+
 let mapleader = "-"
 
 set mouse=a
+
+" keyboard remapings
+:inoremap jk <esc>
+:inoremap <esc> <nop>
 
