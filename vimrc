@@ -30,7 +30,7 @@ augroup vimrc
 	au FileType haskell,python,java,xml set ts=4 sw=4 et
 
 	" tabstop 2 spaces
-	au FileType ats,hy,lua,clojure,ocaml,ruby,scheme,cabal set ts=2 sw=2 et
+	au FileType yaml,ats,hy,lua,clojure,ocaml,ruby,scheme,cabal set ts=2 sw=2 et
 
 	" My C conventions
 	" au FileType c,cpp set ts=4 sw=4 tw=80
