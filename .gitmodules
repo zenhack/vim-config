@@ -1,6 +1,12 @@
 [submodule "bundle/vim-hy"]
 	path = bundle/vim-hy
 	url = git://github.com/hylang/vim-hy
+[submodule "bundle/vim-clojure-static"]
+	path = bundle/vim-clojure-static
+	url = git://github.com/guns/vim-clojure-static
+[submodule "python-mode"]
+	path = python-mode
+	url = git://github.com/klen/python-mode
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
 	url = git://github.com/klen/python-mode

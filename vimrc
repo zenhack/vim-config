@@ -1,71 +1,97 @@
+" {{{ init
+filetype off
+execute pathogen#infect()
+filetype plugin indent on
+syntax on
+highlight BadWhitespace ctermbg=red guibg=red
+
 set nocp
 set bs=2
 set bg=dark
-
-filetype off
-call pathogen#infect()
-call pathogen#helptags()
-filetype plugin indent on
-syntax on
-
-" Folds are useful, but I don't want to see them by default.
-set nofen
-
-let mapleader = "-"
-let maplocalleader = "\\"
-
-:nnoremap <leader>ev :tabe $MYVIMRC<cr>
-:nnoremap <leader>sv :source $MYVIMRC<cr>
-
 set mouse=a
+set incsearch
+" }}}
+" {{{ functions
+fu Map_ftype(ftypes, cmd)
+	for ftype in a:ftypes
+		execute 'au Filetype' ftype a:cmd
+	endfor
+endf
+" }}}
+" {{{ classify filetypes
+let prose_fts = ['gitcommit', 'mail',  'markdown',  'text']
+" {{{ tabexpand
+let et_fts = ['haskell',  'java',  'yaml', 'ats', 'hy', 'lua']
+let et_fts += ['clojure', 'ocaml', 'ruby', 'scheme', 'cabal']
+let et_fts += ['erlang', 'markdown', 'text', 'mail', 'gitcommit']
 
-:inoremap jk <esc>
+let noet_fts = ['html', 'xml']
+
+" }}}
+" {{{ foldenable
+
+set nofen
+set foldmethod=indent
+
+let fen_fts = ['vim']
+
+" }}}
+" tabstop {{{
 
 " by default, tabstop tabs(8), max line length 80.
 set ts=8 sw=8 noet tw=80
 
-augroup vimrc
+let ts2_fts = ['yaml', 'ats', 'html', 'hy', 'lua', 'clojure']
+let ts2_fts += ['ocaml', 'ruby', 'scheme', 'cabal', 'erlang', 'xml']
+
+let ts4_fts = ['haskell', 'python', 'java', 'markdown'] + prose_fts
+" }}}
+" }}}
+augroup vimrc " {{{
 	autocmd!
-	" tabstop 4 spaces
-	au FileType haskell,python,java,xml set ts=4 sw=4 et
+	call Map_ftype(fen_fts, 'setlocal foldmethod=marker fen')
+	call Map_ftype(et_fts, 'setlocal et')
+	call Map_ftype(noet_fts, 'setlocal noet')
 
-	" tabstop 2 spaces
-	au FileType yaml,ats,hy,lua,clojure,ocaml,ruby,scheme,cabal set ts=2 sw=2 et
+	call Map_ftype(ts2_fts, 'setlocal ts=2 sw=2')
+	call Map_ftype(ts4_fts, 'setlocal ts=4 sw=4')
 
-	" My C conventions
-	" au FileType c,cpp set ts=4 sw=4 tw=80
-
-	au FileType html set ts=2 sw=2
-
+	au FileType yaml filetype plugin indent off
+	" repls {{{
+	au FileType lisp nnoremap M :!clisp -repl %<cr><cr>
+	au FileType python nnoremap M :!python2 -i %<cr><cr>
+	au FileType scheme nnoremap M :!rlwrap csi %<cr><cr>
+	" }}}
+	" prose {{{
 	" We want word wrapping for 'prose'. We also want spell check.
 	au BufRead,BufNewFile /*.md set ft=markdown
-	au FileType markdown,text set tw=72 spell
-
-	au BufRead,BufNewFile /tmp/alot.* set ft=mail
-	au FileType mail set spell
-
+	call Map_ftype(prose_fts, 'set tw=72 spell')
 	au FileType help set nospell
-
-
+	" }}}
+	" filetypes {{{
 	au BufRead,BufNewFile *.hamlet set ft=haskell
+	au BufRead,BufNewFile *.elm set ft=haskell
+	au BufRead,BufNewFile /tmp/alot.* set ft=mail
+	" }}}
+	au FileType python match BadWhitespace /\s\+$/
 
+	" The usual 80ish characters tends to be too short for go programs.
+	au FileType go set tw=100
 
-	au FileType lisp nnoremap M :!clisp -repl %<cr><cr>
-	au FileType python nnoremap M :!python -i %<cr><cr>
-	au FileType scheme nnoremap M :!rlwrap csi %<cr><cr>
+augroup END " }}}
+" {{{ key bindings
+let mapleader = "-"
+let maplocalleader = "\\"
 
-	au BufRead,BufNewFile *.de set ft=deutsch
-	au FileType deutsch inoremap ae ä
-	au FileType deutsch inoremap oe ö
-	au FileType deutsch inoremap ue ü
-	au FileType deutsch inoremap Ae Ä
-	au FileType deutsch inoremap Oe Ö
-	au FileType deutsch inoremap Ue Ü
-	au FileType deutsch inoremap sss ß
-augroup END
+inoremap jk <esc>
+
+nnoremap <leader>ev :tabe $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 nnoremap J <c-w>j
 nnoremap K <c-w>k
 nnoremap L <c-w>l
 nnoremap H <c-w>h
 
+nnoremap <c-w> <nop>
+" }}}
