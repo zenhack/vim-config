@@ -10,3 +10,9 @@
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
 	url = git://github.com/klen/python-mode
+[submodule "bundle/coq.vim"]
+	path = bundle/coq.vim
+	url = git://github.com/jvoorhis/coq.vim
+[submodule "bundle/idris-vim"]
+	path = bundle/idris-vim
+	url = git://github.com/idris-hackers/idris-vim
