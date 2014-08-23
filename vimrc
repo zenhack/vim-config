@@ -7,6 +7,10 @@ highlight BadWhitespace ctermbg=red guibg=red
 
 let g:pymode_rope = 0
 
+if has("cscope")
+	set cst
+endif
+
 set nocp
 set bs=2
 set bg=dark
