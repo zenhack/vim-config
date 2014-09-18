@@ -60,6 +60,8 @@ augroup vimrc " {{{
 	call Map_ftype(ts2_fts, 'setlocal ts=2 sw=2')
 	call Map_ftype(ts4_fts, 'setlocal ts=4 sw=4')
 
+	au FileType c set cscopetag
+
 	au FileType yaml filetype plugin indent off
 	" repls {{{
 	au FileType lisp nnoremap M :!clisp -repl %<cr><cr>
