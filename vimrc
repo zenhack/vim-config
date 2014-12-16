@@ -4,6 +4,8 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on
 highlight BadWhitespace ctermbg=red guibg=red
+set rnu
+set nu
 
 let g:pymode_rope = 0
 
@@ -70,12 +72,12 @@ augroup vimrc " {{{
 	" repls {{{
 	au FileType lisp nnoremap M :!clisp -repl %<cr><cr>
 	au FileType python nnoremap M :!python2 -i %<cr><cr>
-	au FileType scheme nnoremap M :!rlwrap csi %<cr><cr>
+	au FileType scheme nnoremap M :!rlwrap guile -l %<cr><cr>
 	" }}}
 	" prose {{{
 	" We want word wrapping for 'prose'. We also want spell check.
 	au BufRead,BufNewFile /*.md set ft=markdown
-	call Map_ftype(prose_fts, 'set tw=72 spell')
+	call Map_ftype(prose_fts, 'set tw=72 fo=aw2tq spell')
 	au FileType help set nospell
 	" }}}
 	" filetypes {{{
