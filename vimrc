@@ -107,4 +107,7 @@ nnoremap L <c-w>l
 nnoremap H <c-w>h
 
 nnoremap <c-w> <nop>
+
+nnoremap <leader>d /PGP<cr>VG:s/> *//<cr>gg/PGP<cr>VG:!gpg -d<cr>gg/Quoting<cr>jVG:s/^/> /<cr>
+
 " }}}
