@@ -13,3 +13,6 @@
 [submodule "bundle/idris-vim"]
 	path = bundle/idris-vim
 	url = git://github.com/idris-hackers/idris-vim
+[submodule "bundle/indent-object"]
+	path = bundle/indent-object
+	url = git://github.com/michaeljsmith/vim-indent-object
