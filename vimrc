@@ -15,7 +15,13 @@ endif
 
 set nocp
 set bs=2
-set bg=light
+
+if $BG_COLOR == "light"
+	set bg=light
+else
+	set bg=dark
+endif
+
 set mouse=a
 set incsearch
 " }}}
