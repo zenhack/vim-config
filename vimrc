@@ -15,7 +15,7 @@ endif
 
 set nocp
 set bs=2
-set bg=dark
+set bg=light
 set mouse=a
 set incsearch
 " }}}
