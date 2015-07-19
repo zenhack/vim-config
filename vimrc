@@ -15,7 +15,13 @@ endif
 
 set nocp
 set bs=2
-set bg=dark
+
+if $BG_COLOR == "light"
+	set bg=light
+else
+	set bg=dark
+endif
+
 set mouse=a
 set incsearch
 " }}}
@@ -52,7 +58,7 @@ set ts=8 sw=8 noet tw=80
 
 let ts2_fts = ['yaml', 'ats', 'html', 'hy', 'lua', 'clojure']
 let ts2_fts += ['ocaml', 'ruby', 'scheme', 'cabal', 'erlang', 'xml']
-let ts2_fts += ['puppet', 'htmldjango', 'json']
+let ts2_fts += ['puppet', 'htmldjango', 'json', 'javascript']
 
 let ts4_fts = ['haskell', 'python', 'java', 'julia'] + prose_fts
 " }}}
@@ -108,6 +114,6 @@ nnoremap H <c-w>h
 
 nnoremap <c-w> <nop>
 
-nnoremap <leader>d /PGP<cr>VG:s/> *//<cr>gg/PGP<cr>VG:!gpg -d<cr>gg/Quoting<cr>jVG:s/^/> /<cr>:%s/\r//g<cr>
+nnoremap <leader>d /PGP<cr>VG:s/[> ]*//<cr>gg/PGP<cr>VG:!gpg -d<cr>gg/Quoting<cr>jVG:s/^/> /<cr>:%s/\r//g<cr>
 
 " }}}
