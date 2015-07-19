@@ -65,6 +65,7 @@ let ts4_fts = ['haskell', 'python', 'java', 'julia'] + prose_fts
 " }}}
 augroup vimrc " {{{
 	autocmd!
+	autocmd BufWritePre * :%s/\s\+$//e
 	call Map_ftype(fen_fts, 'setlocal foldmethod=marker fen')
 	call Map_ftype(et_fts, 'setlocal et')
 	call Map_ftype(noet_fts, 'setlocal noet')
