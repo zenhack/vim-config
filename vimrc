@@ -116,5 +116,5 @@ nnoremap H <c-w>h
 nnoremap <c-w> <nop>
 
 nnoremap <leader>d /PGP<cr>VG:s/[> ]*//<cr>gg/PGP<cr>VG:!gpg -d<cr>gg/Quoting<cr>jVG:s/^/> /<cr>:%s/\r//g<cr>
-nnoremap <leader>f gwip
+nnoremap <leader>f gwip<cr>
 " }}}
