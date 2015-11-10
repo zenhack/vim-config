@@ -78,7 +78,7 @@ augroup vimrc " {{{
 	au FileType yaml filetype plugin indent off
 	" repls {{{
 	au FileType lisp nnoremap M :!clisp -repl %<cr><cr>
-	au FileType python nnoremap M :!python2 -i %<cr><cr>
+	au FileType python nnoremap M :!python -i %<cr><cr>
 	au FileType scheme nnoremap M :!rlwrap guile -l %<cr><cr>
 	" }}}
 	" prose {{{
