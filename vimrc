@@ -91,12 +91,16 @@ augroup vimrc " {{{
 	au BufRead,BufNewFile *.hamlet set ft=haskell
 	au BufRead,BufNewFile *.elm set ft=haskell
 	au BufRead,BufNewFile /tmp/alot.* set ft=mail
+	au BufRead,BufNewFile *.mail set ft=mail
 	au BufRead,BufNewFile *.pl set ft=prolog
 	" }}}
 	au FileType python match BadWhitespace /\s\+$/
 
 	" The usual 80ish characters tends to be too short for go programs.
 	au FileType go set tw=100
+
+	au FileType mail set ff=dos
+	au FileType mail nnoremap <leader>c :read !m contact<cr>
 
 augroup END " }}}
 " {{{ key bindings
