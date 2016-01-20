@@ -19,3 +19,6 @@
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
 	url = https://github.com/fatih/vim-go
+[submodule "bundle/julia-vim"]
+	path = bundle/julia-vim
+	url = https://github.com/JuliaLang/julia-vim
