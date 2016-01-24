@@ -221,3 +221,6 @@ Kickstart
 Redhat
 NixOS
 Nixpkgs
+cron
+auth
+plugin
