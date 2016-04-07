@@ -224,6 +224,9 @@ Kickstart
 Redhat
 NixOS
 Nixpkgs
+cron
+auth
+plugin
 Arisia
 svg
 YAML
@@ -250,3 +253,8 @@ Haskell's
 Papercut
 Papercuts
 Libreoffice
+OTP
+irc
+GiB
+IDv3
+AGPLv3
