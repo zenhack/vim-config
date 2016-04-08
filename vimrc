@@ -4,7 +4,6 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on
 highlight BadWhitespace ctermbg=red guibg=red
-set rnu
 set nu
 
 let g:pymode_rope = 0
