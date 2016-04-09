@@ -97,9 +97,6 @@ augroup vimrc " {{{
 
 	" The usual 80ish characters tends to be too short for go programs.
 	au FileType go set tw=100
-
-	au FileType mail nnoremap <leader>c :read !m contact<cr>
-
 augroup END " }}}
 " {{{ key bindings
 let mapleader = "-"
