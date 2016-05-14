@@ -300,3 +300,6 @@ VCSes
 guid
 sha1
 repo's
+tmux
+websocket
+opensmtpd
