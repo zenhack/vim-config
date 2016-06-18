@@ -37,7 +37,7 @@ let prose_fts = ['gitcommit', 'mail',  'markdown',  'text']
 let et_fts = ['haskell',  'java',  'yaml', 'ats', 'hy', 'lua']
 let et_fts += ['clojure', 'ocaml', 'ruby', 'scheme', 'cabal']
 let et_fts += ['erlang', 'markdown', 'text', 'mail', 'gitcommit']
-let et_fts += ['puppet', 'julia']
+let et_fts += ['puppet', 'julia', 'elm']
 
 let noet_fts = ['html', 'xml']
 
@@ -57,7 +57,7 @@ set ts=8 sw=8 noet tw=80
 
 let ts2_fts = ['yaml', 'ats', 'html', 'hy', 'lua', 'clojure']
 let ts2_fts += ['ocaml', 'ruby', 'scheme', 'cabal', 'erlang', 'xml']
-let ts2_fts += ['puppet', 'htmldjango', 'json', 'javascript']
+let ts2_fts += ['puppet', 'htmldjango', 'json', 'javascript', 'elm']
 
 let ts4_fts = ['haskell', 'python', 'java', 'julia'] + prose_fts
 " }}}
@@ -88,7 +88,6 @@ augroup vimrc " {{{
 	" }}}
 	" filetypes {{{
 	au BufRead,BufNewFile *.hamlet set ft=haskell
-	au BufRead,BufNewFile *.elm set ft=haskell
 	au BufRead,BufNewFile /tmp/alot.* set ft=mail
 	au BufRead,BufNewFile *.mail set ft=mail
 	au BufRead,BufNewFile *.pl set ft=prolog
