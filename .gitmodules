@@ -31,3 +31,12 @@
 [submodule "bundle/elm.vim"]
 	path = bundle/elm.vim
 	url = https://github.com/lambdatoast/elm.vim
+[submodule "bundle/rust"]
+	path = bundle/rust
+	url = https://github.com/rust-lang/rust.vim
+[submodule "bundle/vim-elixir"]
+	path = bundle/vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir
+[submodule "bundle/vim-capnp"]
+	path = bundle/vim-capnp
+	url = https://github.com/peter-edge/vim-capnp
