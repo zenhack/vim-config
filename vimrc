@@ -1,4 +1,7 @@
 " {{{ init
+
+let g:gofmt_command = "goimports"
+
 filetype off
 execute pathogen#infect()
 filetype plugin indent on
@@ -7,6 +10,7 @@ highlight BadWhitespace ctermbg=red guibg=red
 set nu
 
 let g:pymode_rope = 0
+
 
 if has("cscope")
 	set cst
@@ -37,7 +41,7 @@ let prose_fts = ['gitcommit', 'mail',  'markdown',  'text']
 let et_fts = ['haskell',  'java',  'yaml', 'ats', 'hy', 'lua']
 let et_fts += ['clojure', 'ocaml', 'ruby', 'scheme', 'cabal']
 let et_fts += ['erlang', 'markdown', 'text', 'mail', 'gitcommit']
-let et_fts += ['puppet', 'julia', 'elm']
+let et_fts += ['puppet', 'julia', 'elm', 'rust', 'idris']
 
 let noet_fts = ['html', 'xml']
 
@@ -55,11 +59,11 @@ let fen_fts = ['vim']
 " by default, tabstop tabs(8), max line length 80.
 set ts=8 sw=8 noet tw=80
 
-let ts2_fts = ['yaml', 'ats', 'html', 'hy', 'lua', 'clojure']
+let ts2_fts = ['yaml', 'ats', 'html', 'hy', 'lua', 'clojure',]
 let ts2_fts += ['ocaml', 'ruby', 'scheme', 'cabal', 'erlang', 'xml']
 let ts2_fts += ['puppet', 'htmldjango', 'json', 'javascript', 'elm']
 
-let ts4_fts = ['haskell', 'python', 'java', 'julia'] + prose_fts
+let ts4_fts = ['idris', 'haskell', 'python', 'java', 'julia', 'rust'] + prose_fts
 " }}}
 " }}}
 augroup vimrc " {{{
