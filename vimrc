@@ -38,7 +38,7 @@ endf
 " {{{ classify filetypes
 let prose_fts = ['gitcommit', 'mail',  'markdown',  'text']
 " {{{ tabexpand
-let et_fts = ['haskell',  'java',  'yaml', 'ats', 'hy', 'lua']
+let et_fts = ['haskell',  'java',  'yaml', 'ats', 'hy', 'lua', 'scala']
 let et_fts += ['clojure', 'ocaml', 'ruby', 'scheme', 'cabal']
 let et_fts += ['erlang', 'markdown', 'text', 'mail', 'gitcommit']
 let et_fts += ['puppet', 'julia', 'elm', 'rust', 'idris']
@@ -59,7 +59,7 @@ let fen_fts = ['vim']
 " by default, tabstop tabs(8), max line length 80.
 set ts=8 sw=8 noet tw=80
 
-let ts2_fts = ['yaml', 'ats', 'html', 'hy', 'lua', 'clojure',]
+let ts2_fts = ['yaml', 'ats', 'html', 'hy', 'lua', 'clojure', 'scala']
 let ts2_fts += ['ocaml', 'ruby', 'scheme', 'cabal', 'erlang', 'xml']
 let ts2_fts += ['puppet', 'htmldjango', 'json', 'javascript', 'elm']
 
