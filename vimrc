@@ -91,6 +91,7 @@ augroup vimrc " {{{
 	au FileType help set nospell
 	" }}}
 	" filetypes {{{
+	au BufRead,BufNewFile *.pyi set ft=python
 	au BufRead,BufNewFile *.hamlet set ft=haskell
 	au BufRead,BufNewFile /tmp/alot.* set ft=mail
 	au BufRead,BufNewFile *.mail set ft=mail
