@@ -40,3 +40,6 @@
 [submodule "bundle/vim-capnp"]
 	path = bundle/vim-capnp
 	url = https://github.com/peter-edge/vim-capnp
+[submodule "bundle/pony-vim-syntax"]
+	path = bundle/pony-vim-syntax
+	url = https://github.com/dleonard0/pony-vim-syntax
