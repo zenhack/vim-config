@@ -41,7 +41,7 @@ let prose_fts = ['gitcommit', 'mail',  'markdown',  'text']
 let et_fts = ['haskell',  'java',  'yaml', 'ats', 'hy', 'lua', 'scala']
 let et_fts += ['clojure', 'ocaml', 'ruby', 'scheme', 'cabal']
 let et_fts += ['erlang', 'markdown', 'text', 'mail', 'gitcommit']
-let et_fts += ['puppet', 'julia', 'elm', 'rust', 'idris']
+let et_fts += ['puppet', 'julia', 'elm', 'rust', 'idris', 'pony']
 
 let noet_fts = ['html', 'xml']
 
@@ -61,7 +61,7 @@ set ts=8 sw=8 noet tw=80
 
 let ts2_fts = ['yaml', 'ats', 'html', 'hy', 'lua', 'clojure', 'scala']
 let ts2_fts += ['ocaml', 'ruby', 'scheme', 'cabal', 'erlang', 'xml']
-let ts2_fts += ['puppet', 'htmldjango', 'json', 'javascript', 'elm']
+let ts2_fts += ['puppet', 'htmldjango', 'json', 'javascript', 'elm', 'pony']
 
 let ts4_fts = ['idris', 'haskell', 'python', 'java', 'julia', 'rust'] + prose_fts
 " }}}
