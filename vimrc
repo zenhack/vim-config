@@ -54,6 +54,8 @@ set foldmethod=indent
 " Fix vim's braindead autocomplete defaults:
 set wildmode=list:longest
 
+set wildignorecase
+
 let fen_fts = ['vim']
 
 " }}}
