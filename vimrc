@@ -52,7 +52,7 @@ set nofen
 set foldmethod=indent
 
 " Fix vim's braindead autocomplete defaults:
-set wildmode=longest:full
+set wildmode=list:longest
 
 let fen_fts = ['vim']
 
