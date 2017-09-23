@@ -51,6 +51,9 @@ let noet_fts = ['html', 'xml']
 set nofen
 set foldmethod=indent
 
+" Fix vim's braindead autocomplete defaults:
+set wildmode=longest:full
+
 let fen_fts = ['vim']
 
 " }}}
@@ -101,6 +104,8 @@ augroup vimrc " {{{
 
 	" The usual 80ish characters tends to be too short for go programs.
 	au FileType go set tw=100
+
+	au FileType haskell set formatprg=stylish-haskell
 augroup END " }}}
 " {{{ key bindings
 let mapleader = "-"
