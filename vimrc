@@ -98,6 +98,8 @@ augroup vimrc " {{{
 	" filetypes {{{
 	au BufRead,BufNewFile *.pyi set ft=python
 	au BufRead,BufNewFile *.hamlet set ft=haskell
+	au BufRead,BufNewFile *.bkp set ft=haskell
+	au BufRead,BufNewFile *.hsig set ft=haskell
 	au BufRead,BufNewFile /tmp/alot.* set ft=mail
 	au BufRead,BufNewFile *.mail set ft=mail
 	au BufRead,BufNewFile *.pl set ft=prolog
