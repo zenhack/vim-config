@@ -71,6 +71,9 @@ let ts2_fts += ['puppet', 'htmldjango', 'json', 'javascript', 'elm', 'pony']
 let ts4_fts = ['idris', 'haskell', 'python', 'java', 'julia', 'rust'] + prose_fts
 " }}}
 " }}}
+
+set rtp^="/home/isd/.opam/system/share/ocp-indent/vim"
+
 augroup vimrc " {{{
 	autocmd!
 	autocmd BufWritePre * :%s/\s\+$//e
@@ -103,6 +106,7 @@ augroup vimrc " {{{
 	au BufRead,BufNewFile /tmp/alot.* set ft=mail
 	au BufRead,BufNewFile *.mail set ft=mail
 	au BufRead,BufNewFile *.pl set ft=prolog
+	au BufRead,BufNewFile jbuild set ft=scheme
 	" }}}
 	au FileType python match BadWhitespace /\s\+$/
 
