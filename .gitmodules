@@ -46,3 +46,6 @@
 [submodule "bundle/vim-nix"]
 	path = bundle/vim-nix
 	url = https://github.com/LnL7/vim-nix
+[submodule "bundle/vim-stylish-haskell"]
+	path = bundle/vim-stylish-haskell
+	url = https://github.com/nbouscal/vim-stylish-haskell
