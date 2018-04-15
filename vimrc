@@ -11,6 +11,11 @@ set nu
 
 let g:pymode_rope = 0
 
+call plug#begin('~/.vim/plugged')
+
+Plug 'elmcast/elm-vim'
+
+call plug#end()
 
 if has("cscope")
 	set cst
@@ -42,8 +47,9 @@ let et_fts = ['haskell',  'java',  'yaml', 'ats', 'hy', 'lua', 'scala']
 let et_fts += ['clojure', 'ocaml', 'ruby', 'scheme', 'cabal']
 let et_fts += ['erlang', 'markdown', 'text', 'mail', 'gitcommit']
 let et_fts += ['puppet', 'julia', 'elm', 'rust', 'idris', 'pony']
+let et_fts += ['zig', 'json']
 
-let noet_fts = ['html', 'xml']
+let noet_fts = ['html', 'xml', 'c']
 
 " }}}
 " {{{ foldenable
@@ -61,14 +67,14 @@ let fen_fts = ['vim']
 " }}}
 " tabstop {{{
 
-" by default, tabstop tabs(8), max line length 80.
-set ts=8 sw=8 noet tw=80
+let ts8_fts = ['c', 'go']
 
 let ts2_fts = ['yaml', 'ats', 'html', 'hy', 'lua', 'clojure', 'scala']
 let ts2_fts += ['ocaml', 'ruby', 'scheme', 'cabal', 'erlang', 'xml']
-let ts2_fts += ['puppet', 'htmldjango', 'json', 'javascript', 'elm', 'pony']
+let ts2_fts += ['puppet', 'htmldjango', 'json', 'javascript', 'pony']
 
-let ts4_fts = ['idris', 'haskell', 'python', 'java', 'julia', 'rust'] + prose_fts
+let ts4_fts = ['idris', 'haskell', 'python', 'java', 'julia', 'rust']
+let ts4_fts += ['elm', 'zig'] + prose_fts
 " }}}
 " }}}
 
@@ -83,6 +89,7 @@ augroup vimrc " {{{
 
 	call Map_ftype(ts2_fts, 'setlocal ts=2 sw=2')
 	call Map_ftype(ts4_fts, 'setlocal ts=4 sw=4')
+	call Map_ftype(ts8_fts, 'setlocal ts=8 sw=8')
 
 	au FileType c set cscopetag
 
@@ -106,6 +113,7 @@ augroup vimrc " {{{
 	au BufRead,BufNewFile /tmp/alot.* set ft=mail
 	au BufRead,BufNewFile *.mail set ft=mail
 	au BufRead,BufNewFile *.pl set ft=prolog
+	au BufRead,BufNewFile *.h set ft=c
 	au BufRead,BufNewFile jbuild set ft=scheme
 	" }}}
 	au FileType python match BadWhitespace /\s\+$/

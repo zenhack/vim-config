@@ -49,3 +49,6 @@
 [submodule "bundle/vim-stylish-haskell"]
 	path = bundle/vim-stylish-haskell
 	url = https://github.com/nbouscal/vim-stylish-haskell
+[submodule "bundle/zig"]
+	path = bundle/zig
+	url = https://github.com/zig-lang/zig.vim
