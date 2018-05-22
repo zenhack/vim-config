@@ -52,3 +52,6 @@
 [submodule "bundle/zig"]
 	path = bundle/zig
 	url = https://github.com/zig-lang/zig.vim
+[submodule "plugged/elm-vim"]
+	path = plugged/elm-vim
+	url = https://github.com/elmcast/elm-vim
