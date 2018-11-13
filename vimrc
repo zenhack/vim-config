@@ -21,11 +21,14 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = []
 let g:syntastic_haskell_checkers = []
 
+let g:syntastic_cpp_compiler_options = '-std=c++17'
+
 let g:pymode_rope = 0
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'elmcast/elm-vim'
+Plug 'reasonml-editor/vim-reason-plus'
 
 call plug#end()
 
