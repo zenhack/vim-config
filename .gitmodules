@@ -61,3 +61,6 @@
 [submodule "plugged/vim-reason-plus"]
 	path = plugged/vim-reason-plus
 	url = https://github.com/reasonml-editor/vim-reason-plus
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
