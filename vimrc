@@ -21,6 +21,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = []
 let g:syntastic_haskell_checkers = []
 let g:syntastic_ocaml_checkers = []
+let g:syntastic_rst_checkers = []
 
 let g:syntastic_cpp_compiler_options = '-std=c++17'
 
