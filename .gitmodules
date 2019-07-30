@@ -67,3 +67,9 @@
 [submodule "bundle/purescript-vim"]
 	path = bundle/purescript-vim
 	url = https://github.com/purescript-contrib/purescript-vim
+[submodule "bundle/typescript-vim"]
+	path = bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim
+[submodule "bundle/vim-tsx"]
+	path = bundle/vim-tsx
+	url = https://github.com/ianks/vim-tsx
