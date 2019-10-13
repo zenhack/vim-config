@@ -9,6 +9,8 @@ syntax on
 highlight BadWhitespace ctermbg=red guibg=red
 set nu
 
+set autoread
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -22,6 +24,8 @@ let g:syntastic_python_checkers = []
 let g:syntastic_haskell_checkers = []
 let g:syntastic_ocaml_checkers = []
 let g:syntastic_rst_checkers = []
+
+let g:syntastic_c_config = '.syntastic_c_config'
 
 let g:syntastic_cpp_compiler_options = '-std=c++17'
 
@@ -64,7 +68,7 @@ let et_fts = ['haskell',  'java',  'yaml', 'ats', 'hy', 'lua', 'scala']
 let et_fts += ['clojure', 'ocaml', 'ruby', 'scheme', 'cabal']
 let et_fts += ['erlang', 'markdown', 'text', 'mail', 'gitcommit']
 let et_fts += ['puppet', 'julia', 'elm', 'rust', 'idris', 'pony']
-let et_fts += ['zig', 'json']
+let et_fts += ['zig', 'json', 'unison']
 
 let noet_fts = ['html', 'xml', 'c']
 
@@ -89,7 +93,7 @@ let ts8_fts = ['c', 'go']
 let ts2_fts = ['yaml', 'ats', 'html', 'hy', 'lua', 'clojure', 'scala']
 let ts2_fts += ['ocaml', 'ruby', 'scheme', 'cabal', 'erlang', 'xml']
 let ts2_fts += ['puppet', 'htmldjango', 'json', 'javascript', 'pony']
-let ts2_fts += ['cpp', 'capnp']
+let ts2_fts += ['cpp', 'capnp', 'unison']
 
 let ts4_fts = ['idris', 'haskell', 'python', 'java', 'julia', 'rust']
 let ts4_fts += ['elm', 'zig'] + prose_fts
@@ -193,6 +197,6 @@ endfor
 " ## end of OPAM user-setup addition for vim / base ## keep this line
 " ## added by OPAM user-setup for vim / ocp-indent ## 61160c23c60831495d3343a260806627 ## you can edit, but keep this line
 if count(s:opam_available_tools,"ocp-indent") == 0
-  source "/home/isd/.opam/4.07.0/share/ocp-indent/vim/indent/ocaml.vim"
+"  source "/home/isd/.opam/4.07.0/share/ocp-indent/vim/indent/ocaml.vim"
 endif
 " ## end of OPAM user-setup addition for vim / ocp-indent ## keep this line
