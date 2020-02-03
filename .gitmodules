@@ -73,3 +73,6 @@
 [submodule "bundle/vim-tsx"]
 	path = bundle/vim-tsx
 	url = https://github.com/ianks/vim-tsx
+[submodule "bundle/ocp-indent-vim"]
+	path = bundle/ocp-indent-vim
+	url = https://github.com/let-def/ocp-indent-vim
