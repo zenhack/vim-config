@@ -76,3 +76,6 @@
 [submodule "bundle/ocp-indent-vim"]
 	path = bundle/ocp-indent-vim
 	url = https://github.com/let-def/ocp-indent-vim
+[submodule "bundle/vim-goimports"]
+	path = bundle/vim-goimports
+	url = https://github.com/mattn/vim-goimports
