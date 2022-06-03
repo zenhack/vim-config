@@ -64,7 +64,7 @@ let et_fts = ['haskell',  'java',  'yaml', 'ats', 'hy', 'lua', 'scala']
 let et_fts += ['clojure', 'ocaml', 'ruby', 'scheme', 'cabal']
 let et_fts += ['erlang', 'markdown', 'text', 'mail', 'gitcommit']
 let et_fts += ['puppet', 'julia', 'elm', 'rust', 'idris', 'pony']
-let et_fts += ['zig', 'json']
+let et_fts += ['zig', 'json', 'typescript']
 
 let noet_fts = ['html', 'xml', 'c']
 
@@ -89,7 +89,7 @@ let ts8_fts = ['c', 'go']
 let ts2_fts = ['yaml', 'ats', 'html', 'hy', 'lua', 'clojure', 'scala']
 let ts2_fts += ['ocaml', 'ruby', 'scheme', 'cabal', 'erlang', 'xml']
 let ts2_fts += ['puppet', 'htmldjango', 'json', 'javascript', 'pony']
-let ts2_fts += ['cpp', 'capnp']
+let ts2_fts += ['typescript', 'cpp', 'capnp']
 
 let ts4_fts = ['idris', 'haskell', 'python', 'java', 'julia', 'rust']
 let ts4_fts += ['elm', 'zig'] + prose_fts
