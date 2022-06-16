@@ -46,9 +46,6 @@
 [submodule "bundle/vim-nix"]
 	path = bundle/vim-nix
 	url = https://github.com/LnL7/vim-nix
-[submodule "bundle/vim-stylish-haskell"]
-	path = bundle/vim-stylish-haskell
-	url = https://github.com/nbouscal/vim-stylish-haskell
 [submodule "bundle/zig"]
 	path = bundle/zig
 	url = https://github.com/zig-lang/zig.vim
@@ -67,3 +64,6 @@
 [submodule "bundle/purescript-vim"]
 	path = bundle/purescript-vim
 	url = https://github.com/purescript-contrib/purescript-vim
+[submodule "bundle/vim-ormolu"]
+	path = bundle/vim-ormolu
+	url = https://github.com/sdiehl/vim-ormolu
