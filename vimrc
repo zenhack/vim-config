@@ -64,7 +64,7 @@ let et_fts = ['haskell',  'java',  'yaml', 'ats', 'hy', 'lua', 'scala']
 let et_fts += ['clojure', 'ocaml', 'ruby', 'scheme', 'cabal']
 let et_fts += ['erlang', 'markdown', 'text', 'mail', 'gitcommit']
 let et_fts += ['puppet', 'julia', 'elm', 'rust', 'idris', 'pony']
-let et_fts += ['zig', 'json', 'typescript']
+let et_fts += ['zig', 'json', 'typescript', 'javascript']
 
 let noet_fts = ['html', 'xml', 'c']
 
