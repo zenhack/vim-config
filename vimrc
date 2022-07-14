@@ -30,6 +30,8 @@ set autoread
 
 let g:pymode_rope = 0
 
+let g:ormolu_options=["--no-cabal"]
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'elmcast/elm-vim'
