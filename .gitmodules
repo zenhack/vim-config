@@ -1,21 +1,21 @@
 [submodule "bundle/vim-hy"]
 	path = bundle/vim-hy
-	url = git://github.com/hylang/vim-hy
+	url = https://github.com/hylang/vim-hy
 [submodule "bundle/vim-clojure-static"]
 	path = bundle/vim-clojure-static
-	url = git://github.com/guns/vim-clojure-static
+	url = https://github.com/guns/vim-clojure-static
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
-	url = git://github.com/klen/python-mode
+	url = https://github.com/klen/python-mode
 [submodule "bundle/coq.vim"]
 	path = bundle/coq.vim
-	url = git://github.com/jvoorhis/coq.vim
+	url = https://github.com/jvoorhis/coq.vim
 [submodule "bundle/idris-vim"]
 	path = bundle/idris-vim
-	url = git://github.com/idris-hackers/idris-vim
+	url = https://github.com/idris-hackers/idris-vim
 [submodule "bundle/indent-object"]
 	path = bundle/indent-object
-	url = git://github.com/michaeljsmith/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
 	url = https://github.com/fatih/vim-go
@@ -39,16 +39,13 @@
 	url = https://github.com/elixir-lang/vim-elixir
 [submodule "bundle/vim-capnp"]
 	path = bundle/vim-capnp
-	url = https://github.com/peter-edge/vim-capnp
+	url = https://github.com/cstrahan/vim-capnp
 [submodule "bundle/pony-vim-syntax"]
 	path = bundle/pony-vim-syntax
 	url = https://github.com/dleonard0/pony-vim-syntax
 [submodule "bundle/vim-nix"]
 	path = bundle/vim-nix
 	url = https://github.com/LnL7/vim-nix
-[submodule "bundle/vim-stylish-haskell"]
-	path = bundle/vim-stylish-haskell
-	url = https://github.com/nbouscal/vim-stylish-haskell
 [submodule "bundle/zig"]
 	path = bundle/zig
 	url = https://github.com/zig-lang/zig.vim
@@ -79,3 +76,6 @@
 [submodule "bundle/vim-goimports"]
 	path = bundle/vim-goimports
 	url = https://github.com/mattn/vim-goimports
+[submodule "bundle/vim-ormolu"]
+	path = bundle/vim-ormolu
+	url = https://github.com/sdiehl/vim-ormolu
