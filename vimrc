@@ -52,7 +52,7 @@ else
 	set bg=dark
 endif
 
-set mouse=a
+set mouse=
 set incsearch
 " }}}
 " {{{ functions
